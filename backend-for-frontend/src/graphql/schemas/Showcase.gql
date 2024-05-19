@@ -1,0 +1,23 @@
+type Showcase {
+  name: String!
+  description: String
+  id: ID!
+  products: [Product!]!
+}
+
+type Query {
+  showcases: [Showcase!]!
+  showcase(id: ID!): Showcase!
+}
+
+input ShowcaseInput {
+  name: String!
+  description: String!
+  products: [ID!]!
+}
+
+type Mutation {
+  createShowcase(input: ShowcaseInput): Showcase!
+  updateShowcase(id: ID!, input: ShowcaseInput): Showcase!
+  deleteShowcase(id: ID!): Boolean!
+}

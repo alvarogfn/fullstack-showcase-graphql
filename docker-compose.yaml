@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  db:
+    image: mongo
+    container_name: db-tema28
+    restart: always
+    ports:
+      - "27017:27017"
+  backend: 
+    build: "./backend"
+    container_name: backend-tema28
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  bff:
+    build: "./backend-for-frontend"
+    container_name: bff-tema28
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+  frontend:
+    build: "./front-end"
+    container_name: frontend-tema28
+    restart: "always"
+    ports:
+     - "3002:8080"
+    depends_on:
+     - bff

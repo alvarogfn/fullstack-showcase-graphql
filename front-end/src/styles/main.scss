@@ -1,0 +1,56 @@
+:root {
+  --color-1: #202529;
+  --color-2: #32383d;
+  --color-3: #4c555c;
+  --color-4: #a1b4c4;
+  --color-5: #1bc6b4;
+  --color-6: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Saira", sans-serif;
+  background-color: var(--color-1);
+}
+
+input,
+button,
+textarea,
+select,
+option {
+  background-color: inherit;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  border: none;
+}
